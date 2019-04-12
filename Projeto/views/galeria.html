@@ -1,0 +1,232 @@
+	<!-- @author: Augusto Henrique -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>PEGADA DIFERENTE - GALERIA</title>
+
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+</head>
+
+<body>
+    <style>
+        /* Formatação do corpo */
+        body {
+            width: 95%; /* tamanho que será ocupado na tela*/
+            max-width: 800px; /* siginifica o tamanho máximo de largura */ 
+            margin: auto; /* faz com que a borda se ajuste automaticamente */
+            background-color: #ffb901; /* cor de fundo da página*/
+            background-image: url('img/fundo.jpg'); /* imagem de fundo da página*/
+            font-family: sans-serif; /*estilo de fonte escolhido */
+            line-height: 1.5;
+            color: white;
+        }
+
+        /* Caixa preta com opacidade */
+        main {
+	        min-height: 527px; /*ajuste da altura mínima */
+            background: #00000054; /* fundo preto com opacidade de 50% */
+            padding: 5px 40px; /* ajustes das margens laterais da caixa com opacidade preta 50% */
+            margin-top: 45px; /* ajuste do topo da margem superior da caixa com opacidade preta 50% */
+            border-radius: 10px 10px 0px 0px; /* ajusta o arredondamento das bordas*/
+        }
+
+        /*Formatação do Menu*/
+        nav {
+            display: block;
+        }
+
+        nav ul {
+            list-style: none; /*serve para tirar as bolinhas da "ul" do menu*/
+            text-transform: uppercase;
+            position: absolute; /*serve para que o menu fique por cima dos elementos em uma posição absoluta*/
+            top: -20px;
+            left: 580px;
+        }
+
+        nav li { /*com esse comando, irei deixar  o meu menu em formato horizontal*/
+            display: inline-block; /* faz com que um bloco apareça na mesma linha*/
+            background-color: #ffcc0000;
+            padding: 10px; /*comando que controla o espaço do interior da caixa*/
+            margin: 2px; /*comando que controla o espaço externos entre as caixas*/
+            transition: 1s; /*transição nos botões do menu*/
+        }
+
+        nav li:hover {
+            background-color: white; /*efeito com janela branca, quando passar o mouse por cima do menu*/
+        } 
+
+        nav h1{
+            display: none; /*serve para esconder o texto do menu principal*/
+        }
+
+        nav a { /* agora estamos configurando o estilo dos links do menu*/
+            color: white; /*cor do texto do menu*/
+            text-decoration: none; /*estou retirando o sublinhado*/
+        }
+
+        nav a:hover {
+            color: #FFCA00;
+        }
+
+        /* Formatação do conteúdo */
+        .centralizar {
+            text-align: center;
+        }
+
+        h1.centralizar {
+            margin-bottom: 2px;
+            padding-bottom: 0px;
+        }
+
+        section ul {
+            list-style: none;
+        }
+
+        section li h5{
+            padding: 5px;
+            margin: 0px;
+        }
+
+        section#home ul {
+            list-style: none;
+        }
+
+        section#home li h5{
+            padding: 5px;
+            margin: 0px;
+        }
+
+        /* Formatação da agenda */
+        #tblAgenda {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border: 2px solid #000;
+            border-collapse: collapse;
+            width: 80%;
+            background-color: #ddd;
+        }
+
+        #tblAgenda td, #tblAgenda th{
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #tblAgenda tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #tblAgenda th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background: -moz-linear-gradient(#000, #0070ff);
+            background: -webkit-linear-gradient(#000, #0070ff);
+            color: white;
+        }
+
+        #linkAgenda {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Times New Roman';
+            padding: 4px 6px 4px 6px;
+        }
+
+        #linkAgendaVoltar {
+            display: block;
+            border: 1px solid #000;
+            background-color: #ddd;
+            width: 80px;
+            color: #000;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Times New Roman';
+            padding: 4px 6px 4px 6px;
+            margin: 0px 6px 4px 0px;
+        }
+
+        table#agenda {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            margin-top: 30px;
+            border: 2px solid #000;
+            border-collapse: collapse;
+            width: 25%;
+            background-color: #fff;
+        }
+
+        table#agenda td, table#agenda th {
+            height: 22px;
+            padding: 10px 8px 4px 10px;
+        }
+
+        table#agenda input {
+            height: 30px;
+            background-color: #ddd;
+        }
+
+        /* Formatação da galeria */
+        section#galeria ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            padding: 0px;
+            margin: 0 auto;
+        }
+
+        .miniatura {
+            width: 340px;
+            padding: 10px;
+        }
+
+        /* Formatação do rodapé */
+        footer {
+            width: 100%;
+            background: #000000b2;
+            color: white;
+            text-align: center;
+            line-height: 3;
+        }
+
+        footer h5 {
+            margin: 0px;
+            padding: 8px;
+        }
+    </style>
+	<main>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="agenda">Agenda</a></li>
+					<li><a href="galeria">Galeria</a></li>
+					<li><a href="faleConosco">Fale conosco</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="galeria">
+			<div class="centralizar">
+				<img src="img/logo.png" alt="LOGO DA BANDA">
+			</div>
+
+			<h1 class="centralizar">GALERIA</h1>
+			<ul>
+				<li><img src="img/balada-1.jpg" class="miniatura"></li>
+				<li><img src="img/balada-2.jpg" class="miniatura"></li>
+			</ul>
+			<ul>
+				<li><img src="img/balada-3.jpg" class="miniatura"></li>
+				<li><img src="img/balada-4.jpg" class="miniatura"></li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<h5 class="centralizar">
+			"Temos como objetivo, despertar sentimentos e sensações nas pessoas, através da
+			música."
+		</h5>
+	</footer>
+</body>
+
+</html>
